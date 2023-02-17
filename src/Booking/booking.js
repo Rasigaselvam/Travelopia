@@ -15,7 +15,6 @@ const Booking = (): any => {
 
     const handleSave = (data) => {
         data.booking.createdby = "user"
-        console.log("data", data)
         axios.post('http://localhost:5000/api/booking', data)
             .then(function (response) {
                 if (Object.keys(response).length !== 0) {
