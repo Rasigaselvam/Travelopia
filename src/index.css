@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.fs {
+  color:darkturquoise !important;
+  font-family: 'Raleway' !important
+}
+.fh-color{
+  color:gray !important;
+  font-family: 'Raleway' !important;
+  font-weight: 500;
+  padding: 10px;
+}
+.fh1-color .css-1qvr50w-MuiTypography-root{
+  font-family: unset !important;
+  font-family: 'Raleway' !important;
+}
+.h-center{
+  justify-content: center !important;
+}
+.mb{
+  margin-bottom: 10px;
+}
+.fh-size-center{
+  font-size: xx-large;
+  text-align: center !important;
+  margin-bottom: 10px;
+}
