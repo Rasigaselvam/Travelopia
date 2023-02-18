@@ -50,10 +50,11 @@ const Booking = (): any => {
     });
     useEffect(() => {
         var val = 0;
-        if (formik.values.numberoftravellers == 'India') {
+        console.log()
+        if (formik.values.country == 'India') {
             val = formik.values.numberoftravellers * 100;
         }
-        else if (formik.values.numberoftravellers == 'Africa') {
+        else if (formik.values.country == 'Africa') {
             val = formik.values.numberoftravellers * 200;
         }
         else {
