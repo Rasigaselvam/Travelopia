@@ -12,10 +12,9 @@ import '../index.css';
 
 const Booking = (): any => {
     const navigate = useNavigate();
-
     const handleSave = (data) => {
         data.booking.createdby = "user"
-        axios.post('http://localhost:5000/api/booking', data)
+        axios.post(process.env.REACT_APP_API_URL+'/api/booking', data)
             .then(function (response) {
                 if (Object.keys(response).length !== 0) {
                     navigate('/dashboard');

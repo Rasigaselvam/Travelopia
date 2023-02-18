@@ -13,7 +13,7 @@ const Dashboard = (): any => {
     const navigate = useNavigate();
 
     const fetchData = () => {
-        axios.get('http://localhost:5000/api/booking')
+        axios.get(process.env.REACT_APP_API_URL+"/api/booking")
             .then(function (response) {
                 setUsers(response.data)
             })
