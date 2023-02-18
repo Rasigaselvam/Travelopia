@@ -5,7 +5,7 @@ This project was Material UI with [Create React App](https://reactjs.org/docs/cr
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\
