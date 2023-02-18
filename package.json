@@ -17,10 +17,12 @@
     "date-format": "^4.0.14",
     "dateformat": "^5.0.3",
     "formik": "^2.2.9",
+    "jest-mock-axios": "^4.7.0-beta4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "react-select-event": "^5.5.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.0"
@@ -47,6 +49,11 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)/"
     ]
   }
 }

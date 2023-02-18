@@ -16,6 +16,7 @@ const Booking = (): any => {
         data.booking.createdby = "user"
         axios.post(process.env.REACT_APP_API_URL+'/api/booking', data)
             .then(function (response) {
+                console.log("nter the response", response)
                 if (Object.keys(response).length !== 0) {
                     navigate('/dashboard');
                 }
@@ -44,6 +45,7 @@ const Booking = (): any => {
             let data = {
                 'booking': values
             }
+            console.log(data)
             handleSave(data)
         },
     });
@@ -78,6 +80,7 @@ const Booking = (): any => {
                             <form onSubmit={formik.handleSubmit}>
                                 <Stack m={2} spacing={3}>
                                     <TextField label="Name"
+                                        data-testid="name"
                                         name="name"
                                         value={formik.values.name}
                                         onChange={formik.handleChange}
@@ -85,11 +88,13 @@ const Booking = (): any => {
                                         helperText={formik.touched.name && formik.errors.name} />
                                     <TextField label="Email Address"
                                         name="email"
+                                        data-testid="email"
                                         value={formik.values.email}
                                         onChange={formik.handleChange}
                                         error={formik.touched.email && Boolean(formik.errors.email)}
                                         helperText={formik.touched.email && formik.errors.email} />
                                     <TextField select label="Country"
+                                    data-testid="country"
                                         name="country"
                                         value={formik.values.country}
                                         onChange={formik.handleChange}
@@ -101,6 +106,7 @@ const Booking = (): any => {
                                     </TextField>
                                     <TextField
                                         label="No. of travellers"
+                                        data-testid="no.of travellers"
                                         type="number"
                                         name="numberoftravellers"
                                         value={formik.values.numberoftravellers}
@@ -114,6 +120,7 @@ const Booking = (): any => {
                                     <TextField
                                         label="Amount"
                                         name="amount"
+                                        data-testid="amount"
                                         value={formik.values.amount}
                                         onChange={formik.handleChange}
                                         disabled
@@ -124,7 +131,7 @@ const Booking = (): any => {
                                             startAdornment: <InputAdornment position="start">$</InputAdornment>,
                                         }}
                                     />
-                                    <Button variant="contained" type="submit">
+                                    <Button variant="contained" type="submit" data-testid="booking-save">
                                         submit
                                     </Button>
                                 </Stack>
